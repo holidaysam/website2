@@ -7,7 +7,6 @@ score = 0
 brickRowCount = 9
 brickColumnCount = 5
 
-console.log("HELLO")
 
 
 // create ball properties
@@ -134,8 +133,14 @@ function keyUp(e) {
 document.addEventListener('keydown', keyDown)
 document.addEventListener('keyup', keyUp)
 
+function moveBall() {
+    ball.x = ball.x + ball.dx
+    ball.y = ball.y + ball.dy
+}
+
 // update canvas drawing and animation
 function update() {
+    moveBall()
     movePaddle()
     draw()
     requestAnimationFrame(update)
