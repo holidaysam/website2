@@ -114,5 +114,11 @@ h1 {
 }
 
 .lose-header {
-    background-color: 
+    background-color: #9d0759;
+    color: white;
+    padding: 15px;
+}
+
+.lose-content {
+    padding: 20px;
 }
