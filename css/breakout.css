@@ -17,6 +17,7 @@ canvas {
     background: #f0f0f0;
     display: block;
     border-radius: 5px;
+    margin: 10px;
 }
 
 h1 {
@@ -63,4 +64,24 @@ h1 {
 
 .rules.show {
     transform: translateX(0);
+}
+
+.start-btn {
+    cursor: pointer;
+    padding: 20px;
+    font-size: 30px;
+    border: none;
+    margin: 20px;
+    border-radius: 5px;
+    color: #9d0759;
+}
+
+.lose-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
 }

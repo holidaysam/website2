@@ -6,6 +6,7 @@ ctx = canvas.getContext('2d')
 score = 0
 brickRowCount = 9
 brickColumnCount = 5
+startBtn = document.getElementById('start-btn')
 
 
 
@@ -205,15 +206,21 @@ function showAllBricks() {
     })
 }
 
+draw()
 // update canvas drawing and animation
 function update() {
     moveBall()
     movePaddle()
     draw()
-    requestAnimationFrame(update)
+    if (x = true) {
+        requestAnimationFrame(update)
+    }
 }
 
-update()
+
+startBtn.addEventListener('click', () => {
+    update()
+})
 
 // rules open and close event handlers
 rulesBtn.addEventListener('click', () => {
