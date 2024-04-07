@@ -7,7 +7,7 @@ score = 0
 brickRowCount = 9
 brickColumnCount = 5
 startBtn = document.getElementById('start-btn')
-
+restartBtn = document.getElementById('restart')
 
 
 // create ball properties
@@ -219,6 +219,10 @@ function update() {
 
 
 startBtn.addEventListener('click', () => {
+    update()
+})
+
+restartBtn.addEventListener('click', () => {
     update()
 })
 
