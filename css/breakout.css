@@ -133,4 +133,7 @@ h1 {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
