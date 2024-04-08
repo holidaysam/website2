@@ -227,10 +227,10 @@ function playMusic() {
 }
 
 musicBtn.addEventListener('click', () => {
-    else {
+    if (true) {
         playMusic()
     }
-})
+}, {once : true})
 
 startBtn.addEventListener('click', () => {
     update()
