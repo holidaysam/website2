@@ -225,7 +225,7 @@ function update() {
 
 
 function playMusic() {
-    var music = new Audio('lofi.mp3')
+    var music = new Audio('sounds/lofi.mp3')
     music.loop = true
     music.play()
 }
