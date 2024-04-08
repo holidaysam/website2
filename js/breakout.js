@@ -8,7 +8,8 @@ brickRowCount = 9
 brickColumnCount = 5
 startBtn = document.getElementById('start-btn')
 restartBtn = document.getElementById('restart')
-
+lose = document.getElementById('lose')
+musicBtn= document.getElementById('music')
 
 // create ball properties
 ball = {
@@ -151,8 +152,8 @@ function moveBall() {
     // wall collision (bottom)
     if (ball.y + ball.size > canvas.height) {
         ball.dy = -1 * ball.dy
-        showAllBricks()
-        score = 0
+        lose.classList.add('show-lose')
+        drawBall()
     }
 
     // wall collision (left)
@@ -212,18 +213,34 @@ function update() {
     moveBall()
     movePaddle()
     draw()
-    if (x = true) {
+    if (true) {
         requestAnimationFrame(update)
     }
 }
 
 
+
+function playMusic() {
+    var music = new Audio('lofi.mp3')
+    music.loop = true
+    music.play()
+}
+
+musicBtn.addEventListener('click', () => {
+    if (true) {
+        playMusic()
+    }
+}, {once : true})
+
 startBtn.addEventListener('click', () => {
     update()
-})
+}, {once : true})
 
 restartBtn.addEventListener('click', () => {
-    update()
+    draw()
+    lose.classList.remove('show-lose')
+    showAllBricks()
+    score = 0
 })
 
 // rules open and close event handlers
