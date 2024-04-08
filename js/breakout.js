@@ -135,6 +135,11 @@ function keyUp(e) {
 document.addEventListener('keydown', keyDown)
 document.addEventListener('keyup', keyUp)
 
+function playSound() {
+    var sound = new Audio('lofi.mp3')
+    sound.play()
+}
+
 function moveBall() {
     ball.x = ball.x + ball.dx
     ball.y = ball.y + ball.dy
