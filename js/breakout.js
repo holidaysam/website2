@@ -140,10 +140,6 @@ function playSound() {
     sound.play()
 }
 
-function loseSound() {
-    var lose_sound = new Audio('wompwomp.mp3')
-    lose_sound.play()
-}
 
 function moveBall() {
     ball.x = ball.x + ball.dx
@@ -163,7 +159,6 @@ function moveBall() {
     if (ball.y + ball.size > canvas.height) {
         ball.dy = -1 * ball.dy
         lose.classList.add('show-lose')
-        loseSound()
     }
 
     // wall collision (left)
