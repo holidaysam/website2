@@ -153,7 +153,7 @@ function moveBall() {
     if (ball.y + ball.size > canvas.height) {
         ball.dy = -1 * ball.dy
         lose.classList.add('show-lose')
-        drawBall()
+        draw()
     }
 
     // wall collision (left)
