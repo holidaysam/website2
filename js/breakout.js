@@ -239,7 +239,7 @@ musicBtn.addEventListener('click', () => {
     } else {
         playMusic();
     }
-}, {once: true);
+});
 
 startBtn.addEventListener('click', () => {
     update()
