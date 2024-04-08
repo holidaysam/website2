@@ -70,7 +70,7 @@ h1 {
     cursor: pointer;
     padding: 20px;
     font-size: 30px;
-    border: none;
+    border-color: pink;
     margin: 20px;
     border-radius: 5px;
     color: #9d0759;
@@ -127,7 +127,7 @@ h1 {
 
 .restart {
     border-radius: 5px;
-    border: none;
+    border-color: pink;
     font-size: 20px;
     background-color: #9d0759;
     color: white;
