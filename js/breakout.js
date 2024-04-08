@@ -230,7 +230,8 @@ musicBtn.addEventListener('click', () => {
     if (true) {
         playMusic()
     }
-}, {once : true})
+    if ()
+})
 
 startBtn.addEventListener('click', () => {
     update()
