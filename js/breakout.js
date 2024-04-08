@@ -226,11 +226,20 @@ function playMusic() {
     music.play()
 }
 
-musicBtn.addEventListener('click', () => {
-    if (true) {
-        playMusic()
+function pauseMusic() {
+    if (music !== null) {
+        music.pause();
+        music.currentTime = 0;
     }
-}, {once : true})
+}
+
+musicBtn.addEventListener('click', () => {
+    if (music !== null && !music.paused) {
+        pauseMusic();
+    } else {
+        playMusic();
+    }
+}, {once: true);
 
 startBtn.addEventListener('click', () => {
     update()
