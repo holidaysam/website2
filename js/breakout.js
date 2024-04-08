@@ -136,7 +136,7 @@ document.addEventListener('keydown', keyDown)
 document.addEventListener('keyup', keyUp)
 
 function playSound() {
-    var sound = new Audio('ball.wav')
+    var sound = new Audio('sounds/ball.wav')
     sound.play()
 }
 
