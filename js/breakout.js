@@ -234,7 +234,7 @@ function pauseMusic() {
 }
 
 musicBtn.addEventListener('click', () => {
-    if (music !== null && !music.paused) {
+    if (music !== null) {
         pauseMusic();
     } else {
         playMusic();
