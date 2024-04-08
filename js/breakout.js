@@ -136,7 +136,7 @@ document.addEventListener('keydown', keyDown)
 document.addEventListener('keyup', keyUp)
 
 function playSound() {
-    var sound = new Audio('lofi.mp3')
+    var sound = new Audio('ball.wav')
     sound.play()
 }
 
@@ -190,6 +190,7 @@ function moveBall() {
                     increaseScore()
                 }
             }
+            playSound()
         })
     })
 }
