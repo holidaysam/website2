@@ -140,6 +140,7 @@ function playSound() {
     sound.play()
 }
 
+x = false
 
 function moveBall() {
     ball.x = ball.x + ball.dx
@@ -213,13 +214,16 @@ function showAllBricks() {
     })
 }
 
+
 draw()
 // update canvas drawing and animation
 function update() {
     moveBall()
     movePaddle()
     draw()
-    requestAnimationFrame(update)
+    if (x = true) {
+        requestAnimationFrame(update)
+    }
 }
 
 
