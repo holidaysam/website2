@@ -140,7 +140,6 @@ function playSound() {
     sound.play()
 }
 
-x = false
 
 function moveBall() {
     ball.x = ball.x + ball.dx
@@ -160,6 +159,7 @@ function moveBall() {
     if (ball.y + ball.size > canvas.height) {
         ball.dy = -1 * ball.dy
         lose.classList.add('show-lose')
+        ball.speed = none
     }
 
     // wall collision (left)
@@ -221,9 +221,7 @@ function update() {
     moveBall()
     movePaddle()
     draw()
-    if (x = true) {
-        requestAnimationFrame(update)
-    }
+    requestAnimationFrame(update)
 }
 
 
@@ -247,6 +245,7 @@ restartBtn.addEventListener('click', () => {
     lose.classList.remove('show-lose')
     showAllBricks()
     score = 0
+    update()
 })
 
 // rules open and close event handlers
