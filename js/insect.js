@@ -15,6 +15,7 @@ start_btn.addEventListener('click', () => {
     screens[0].classList.add('up')
 })
 
+console.log(choose_insect_btns)
 choose_insect_btns.forEach(btn => {
     btn.addEventListener('click', () => {
         console.log("CLICK")
