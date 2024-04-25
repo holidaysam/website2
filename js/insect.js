@@ -15,19 +15,27 @@ start_btn.addEventListener('click', () => {
     screens[0].classList.add('up')
 })
 
-console.log(choose_insect_btns)
+choose_insect_btns[0].addEventListener('click', () => {
+    console.log("H")
+})
+
 choose_insect_btns.forEach(btn => {
     btn.addEventListener('click', () => {
-        console.log("CLICK")
-        const img = btn.querySelector('img')
-        const alt = img.getAttribute('alt')
-        const src = img.getAttribute('src')
-        screens[1].classList.add('up')
-        selected_insect = {src, alt}
-        setTimeout(createInsect, 1000)
-        startGame()
+        console.log("HELLO")
     })
 })
+// choose_insect_btns.forEach(btn => {
+//     btn.addEventListener('click', () => {
+//         console.log("CLICK")
+//         const img = btn.querySelector('img')
+//         const alt = img.getAttribute('alt')
+//         const src = img.getAttribute('src')
+//         screens[1].classList.add('up')
+//         selected_insect = {src, alt}
+//         setTimeout(createInsect, 1000)
+//         startGame()
+//     })
+// })
 
 function createInsect() {
     const insect = document.createElement('div')
