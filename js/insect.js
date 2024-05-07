@@ -8,6 +8,8 @@ const message = document.getElementById('message')
 let seconds = 0
 let score = 0
 let selected_insect = {}
+const winMessage = document.getElementById('win-message')
+const loseMessage = document.getElementById('lose-message')
 
 
 start_btn.addEventListener('click', () => {
@@ -64,14 +66,22 @@ function increaseTime() {
     }
     timeEl.innerHTML = `Time: ${m}:${s}`
     seconds++
+    if (score < 60 && seconds > 30) {
+        message.classList.remove('visible')
+        loseMessage.classList.add('visible')
+    }
 }
 
 function increaseScore() {
     score++
-    if (score > 19) {
+    if (score > 19 && seconds <30) {
         message.classList.add('visible')
     }
     scoreEl.innerHTML = `Score: ${score}`
+    if (score >= 60 && seconds < 30) {
+        message.classList.remove('visible')
+        winMessage.classList.add('visible')
+    }
 }
 
 function getRandomLocation() {

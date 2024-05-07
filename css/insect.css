@@ -140,3 +140,43 @@ h1 {
     width: 100px;
     height: 100px;
 }
+
+.win-message {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    opacity: 0;
+    line-height: 1.7;
+    width: 100vw;
+    z-index: 100;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    transform: translate(-50%, -150%);
+    transition: transform 0.4s ease-in;
+}
+
+.win-message.visible {
+    opacity: 1;
+    transform: translate(-50%, 150%);
+}
+
+.lose-message {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    opacity: 0;
+    line-height: 1.7;
+    width: 100vw;
+    z-index: 100;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    transform: translate(-50%, -150%);
+    transition: transform 0.4s ease-in;
+}
+
+.lose-message.visible {
+    opacity: 1;
+    transform: translate(-50%, 150%);
+}

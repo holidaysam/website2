@@ -16,7 +16,7 @@ const wrongLetters = []
 
 // show hidden word
 function displayWord() {
-    wordEl.interHTML = `
+    wordEl.innerHTML = `
     ${selectedWord
         .split('')
         .map(letter => `
@@ -69,7 +69,7 @@ function showNotification() {
 
 // keydown letter press
 window.addEventListener('keydown', e => {
-    if (e.keyCode >= 65 && <= 90) {
+    if (e.keyCode >=65 && e.keyCode <=90) {
         const letter = e.key
         if (selectedWord.includes(letter)) {
             if (!correctLetters.includes(letter)) {
