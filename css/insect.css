@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patrick+Hand&family=Press+Start+2P&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
 
 * {
     box-sizing: border-box;
@@ -180,3 +182,11 @@ h1 {
     opacity: 1;
     transform: translate(-50%, 150%);
 }
+
+.home {
+    font-family: "Poetsen One", sans-serif;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 
 * {
     box-sizing: border-box;
@@ -124,4 +125,11 @@ h1 {
 
 .notification-container.show {
     transform: translateY(-50px);
+}
+
+.home {
+    font-family: "Poetsen One", sans-serif;
+    position: absolute;
+    top: 20px;
+    left: 30px;
 }
