@@ -10,6 +10,7 @@ const word = ['application', 'programming', 'interface', 'wizard']
 
 let selectedIndex = Math.floor(word.length * Math.random())
 let selectedWord = word[selectedIndex]
+let keepRun = true
 
 const correctLetters = []
 const wrongLetters = []
@@ -32,6 +33,7 @@ function displayWord() {
     if (innerWord == selectedWord) {
         finalMessage.innerText = 'Congratulations! You won!'
         popup.style.display = 'flex'
+        keepRun = false
     }
 }
 
@@ -54,8 +56,9 @@ function updateWrongLettersEl() {
 
     // check if lost
     if (wrongLetters.length == figureParts.length) {
-        finalMessage.innerText = 'Unfortunately you lost!'
+        finalMessage.innerText = 'Unfortunately you lost! Correct Word: ' + selectedWord + ''
         popup.style.display = 'flex'
+        keepRun = false
     }
 }
 
@@ -69,21 +72,23 @@ function showNotification() {
 
 // keydown letter press
 window.addEventListener('keydown', e => {
-    if (e.keyCode >=65 && e.keyCode <=90) {
-        const letter = e.key
-        if (selectedWord.includes(letter)) {
-            if (!correctLetters.includes(letter)) {
-                correctLetters.push(letter)
-                displayWord()
+    if (keepRun == true) {
+        if (e.keyCode >=65 && e.keyCode <=90) {
+            const letter = e.key
+            if (selectedWord.includes(letter)) {
+                if (!correctLetters.includes(letter)) {
+                    correctLetters.push(letter)
+                    displayWord()
+                } else {
+                    showNotification()
+                }
             } else {
-                showNotification()
-            }
-        } else {
-            if(!wrongLetters.includes(letter)) {
-                wrongLetters.push(letter)
-                updateWrongLettersEl()
-            } else {
-                showNotification()
+                if(!wrongLetters.includes(letter)) {
+                    wrongLetters.push(letter)
+                    updateWrongLettersEl()
+                } else {
+                    showNotification()
+                }
             }
         }
     }
@@ -98,6 +103,7 @@ playAgainBtn.addEventListener('click', () => {
     displayWord()
     updateWrongLettersEl()
     popup.style.display = 'none'
+    keepRun = true
 })
 
 displayWord()
